@@ -1,5 +1,5 @@
 require_relative './part_1_solution.rb'
-
+require "pry"
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
@@ -20,6 +20,7 @@ def apply_coupons(cart, coupons)
     }
   }
   product_final_array << applied_coupons
+  binding.pry
 end
 
 def apply_clearance(cart)
