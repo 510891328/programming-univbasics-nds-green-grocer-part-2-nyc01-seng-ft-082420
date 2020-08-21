@@ -20,7 +20,6 @@ def apply_coupons(cart, coupons)
     }
   }
   product_final_array << applied_coupons
-  binding.pry
 end
 
 def apply_clearance(cart)
