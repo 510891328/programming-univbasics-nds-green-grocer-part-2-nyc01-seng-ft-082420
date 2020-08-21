@@ -6,7 +6,7 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   product_final_array = []
   applied_coupons = []
-  coupons.each { |k, v| 
+  coupons.each { |v| 
     cart.each { |value|
     binding.pry
       if value[:item] == v[:item]
