@@ -23,7 +23,7 @@ def apply_clearance(cart)
   # REMEMBER: This method **should** update cart
   cart.map { |v|
     if v[:clearance] == true
-      v[:price] = v[:price] * 0.8
+      v[:price] = (v[:price] * 0.8).round(2)
     end
   }
   cart
