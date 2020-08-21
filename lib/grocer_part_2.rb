@@ -19,7 +19,6 @@ def apply_coupons(cart, coupons)
       end
     }
   }
-  product_final_array << applied_coupons
 end
 
 def apply_clearance(cart)
