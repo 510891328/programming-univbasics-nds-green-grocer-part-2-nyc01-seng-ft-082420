@@ -8,7 +8,6 @@ def apply_coupons(cart, coupons)
   applied_coupons = []
   coupons.each { |v| 
     cart.each { |value|
-    binding.pry
       if value[:item] == v[:item]
         if value[:count] >= v[:num]
           value[:count] -= v[:num]
