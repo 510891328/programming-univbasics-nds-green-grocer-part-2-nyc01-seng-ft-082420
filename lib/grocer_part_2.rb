@@ -9,9 +9,8 @@ def apply_coupons(cart, coupons)
       if value[:item] == v[:item] && value[:count] >= v[:num]
           value[:count] -= v[:num]
           cart << {:item => "#{value[:item]} W/COUPON", :price => v[:cost]/v[:num], :clearance => value[:clearance], :count => v[:num]}
-        else
-          puts "#{value[:item]} is not eligible for discount"
-        end
+      else
+        puts "#{value[:item]} is not eligible for discount"
       end
     }
   }
