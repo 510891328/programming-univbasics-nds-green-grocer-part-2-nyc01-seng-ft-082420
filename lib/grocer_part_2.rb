@@ -4,13 +4,14 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  product_final_array = []
   applied_coupons = []
   coupons.each { |k, v| 
     cart.each { |key, value|
       if value[:item] == v[:item]
         if value[:count] > v[:num]
           value[:count] -= v[:num]
-          applied_coupons << 
+          applied_coupons << {:item => "#{value[:item]} W/COUPON", :price => v[:cost]/v[:num], :clearance => value[:clearance], :count => v[:num]}
         else
           puts "#{value[:item]} is not eligible for discount"
         end
