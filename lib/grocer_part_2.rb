@@ -7,7 +7,7 @@ def apply_coupons(cart, coupons)
   product_final_array = []
   applied_coupons = []
   coupons.each { |k, v| 
-    cart.each { |key, value|
+    cart.each { |value|
     binding.pry
       if value[:item] == v[:item]
         if value[:count] >= v[:num]
