@@ -18,6 +18,7 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
+  binding.pry
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
