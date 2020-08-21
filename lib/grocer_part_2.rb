@@ -12,12 +12,14 @@ def apply_coupons(cart, coupons)
         if value[:count] > v[:num]
           value[:count] -= v[:num]
           applied_coupons << {:item => "#{value[:item]} W/COUPON", :price => v[:cost]/v[:num], :clearance => value[:clearance], :count => v[:num]}
+          applied_coupons << value
         else
           puts "#{value[:item]} is not eligible for discount"
         end
       end
     }
   }
+  product_final_array << applied_coupons
   
 end
 
