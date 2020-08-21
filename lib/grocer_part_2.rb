@@ -24,7 +24,9 @@ def apply_clearance(cart)
   cart.map { |v|
     if v[:clearance] == true
       v[:price] = v[:price] * 0.8
+    end
   }
+  cart
 end
 
 def checkout(cart, coupons)
