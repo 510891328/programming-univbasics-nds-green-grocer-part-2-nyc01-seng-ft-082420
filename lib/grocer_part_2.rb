@@ -9,7 +9,7 @@ def apply_coupons(cart, coupons)
   coupons.each { |k, v| 
     cart.each { |key, value|
       if value[:item] == v[:item]
-        if value[:count] > v[:num]
+        if value[:count] >= v[:num]
           value[:count] -= v[:num]
           applied_coupons << {:item => "#{value[:item]} W/COUPON", :price => v[:cost]/v[:num], :clearance => value[:clearance], :count => v[:num]}
           applied_coupons << value
